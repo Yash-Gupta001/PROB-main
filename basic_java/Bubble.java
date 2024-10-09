@@ -12,6 +12,7 @@ public class Bubble {
         }
 
         System.out.println(minimumSwapsToBeautiful(arr));
+        scanner.close();
     }
 
     public static int minimumSwapsToBeautiful(int[] arr) {

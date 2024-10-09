@@ -36,6 +36,7 @@ System.out.println("Enter Bank Name");
 
  System.out.println("Enter Branch Location");
  BBL=scan.nextLine();
+ scan.close();
 }
  void logic()
 {
@@ -57,6 +58,7 @@ System.out.println("Enter Bank Name");
  default:
  System.out.println("Wrong choice");
 }
+scan.close();
 }
  public String toString()
 {

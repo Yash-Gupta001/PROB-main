@@ -15,6 +15,7 @@ class employee {
         age = scan.nextInt();
         salary = scan.nextInt();
         gender = scan.next().charAt(0);
+        scan.close();
     }
 
     public String toString() {

@@ -8,6 +8,7 @@ class Demo {
         Scanner scan = new Scanner(System.in);
         a = scan.nextInt();
         b = scan.nextInt();
+        scan.close();
     }
 
     int sum() {
