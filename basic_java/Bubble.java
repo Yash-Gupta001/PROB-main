@@ -1,6 +1,6 @@
 package basic_java;
-import java.util.*;
 
+import java.util.*;
 public class Bubble {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

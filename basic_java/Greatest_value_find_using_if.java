@@ -1,3 +1,5 @@
+package basic_java;
+
 import java.util.Scanner;
 
 public class Greatest_value_find_using_if {

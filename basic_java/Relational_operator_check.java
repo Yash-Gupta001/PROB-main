@@ -1,3 +1,5 @@
+package basic_java;
+
 import java.util.*;
 
 public class Relational_operator_check {

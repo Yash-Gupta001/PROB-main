@@ -1,3 +1,5 @@
+package basic_java;
+
 public class Binary_number_system {
     public static void main(String[] args) {
         

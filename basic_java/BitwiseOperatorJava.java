@@ -1,3 +1,5 @@
+package basic_java;
+
 public class BitwiseOperatorJava {
     public static void main(String[] args) {
 

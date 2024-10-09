@@ -1,3 +1,5 @@
+package basic_java;
+
 import java.util.Scanner;
 
 public class Convert_upper_to_lower {

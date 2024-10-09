@@ -1,3 +1,5 @@
+package basic_java;
+
 import java.util.*;
 
 public class Conversion_from_float_to_int {
