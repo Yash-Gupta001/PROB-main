@@ -1,4 +1,3 @@
-package basic_java;
 import java.util.*;
 public class Divisible_by_3 {
     public static void main(String[] args) {

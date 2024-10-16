@@ -8,7 +8,7 @@ int main() {
     getline(cin, sen);
 
     int count = 0;
-
+    
     for (char ch : sen) {
         
         if (ch == ' ') {
@@ -16,8 +16,6 @@ int main() {
         } 
         
     }
-    
     cout << count+1;
-
     return 0;
 }

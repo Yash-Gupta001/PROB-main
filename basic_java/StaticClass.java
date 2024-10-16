@@ -1,4 +1,3 @@
-package basic_java;
 
 class Example {
     static int a = 5; // Static variable

@@ -1,7 +1,6 @@
-package basic_java;
 import java.util.*;
 
-class Logic {
+class Logic{
     public void Primecheck(int[] number) {
         System.out.println("Prime numbers in the array are:");
         for (int i = 0; i < number.length; i++) {
@@ -40,7 +39,7 @@ public class ArrayPrimeSort {
         }
 
         Logic p = new Logic();
-        p.Primecheck(number);  
+        p.Primecheck(number);
 
         sc.close();
     }

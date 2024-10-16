@@ -1,4 +1,3 @@
-package basic_java;
 
 import java.util.*;
 public class Assignment_operator {
@@ -20,6 +19,7 @@ public class Assignment_operator {
         for(int i= 0; i <= 10; i++){
             a *= i;
         }
+        
         System.out.println(a);
 
         for(int i= 0; i <= 10; i++){
