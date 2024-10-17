@@ -27,7 +27,6 @@ class Logic3{
         }
         sc.close();
     }
-
 }
 
 
