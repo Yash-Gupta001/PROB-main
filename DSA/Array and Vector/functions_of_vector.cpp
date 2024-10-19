@@ -3,7 +3,7 @@
 
 using namespace std;  // Namespace declaration
 
-int main() {  // Fixed typo from 'mmain' to 'main'
+int main() { 
     // Demo vector
     vector<int> v = {1, 11, 22, 54, 71, 89};
 
@@ -19,6 +19,20 @@ int main() {  // Fixed typo from 'mmain' to 'main'
     // Print the new size and capacity after adding an element
     cout << "New Size: " << v.size() << endl;
     cout << "New Capacity: " << v.capacity() << endl;
+
+    // print the elements of the array
+    for(int i  = 0; i < v.size();i++){
+        cout << v[i] << endl;
+    }
+
+    // to remove last element fro array
+    v.pop_back();
+    cout << "After pop back function";
+
+    for(int i  = 0; i < v.size();i++){
+        cout << v[i] << endl;
+    }
+
 
     return 0;
 }

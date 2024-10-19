@@ -19,12 +19,12 @@ public class Rev_of_number {
     System.out.println("rev of a number " + rev);
 
 // palindrome logic
-    if(rev==comp){
-        System.out.println("palindrome " + rev);
-    }
-    else{
-        System.out.println("not palindrome" + rev);
-}
+//     if(rev==comp){
+//         System.out.println("palindrome " + rev);
+//     }
+//     else{
+//         System.out.println("not palindrome" + rev);
+// }
 
 // palindrome logic end
 

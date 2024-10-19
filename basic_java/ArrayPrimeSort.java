@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Logic{
+class LogicPrime{
     public void Primecheck(int[] number) {
         System.out.println("Prime numbers in the array are:");
         for (int i = 0; i < number.length; i++) {
@@ -33,12 +33,12 @@ public class ArrayPrimeSort {
         int sz = sc.nextInt();
         int[] number = new int[sz];
 
-        System.out.println("Enter the elements of the array: eun");
+        System.out.println("Enter the elements of the array: ");
         for (int i = 0; i < sz; i++) {
             number[i] = sc.nextInt();
         }
 
-        Logic p = new Logic();
+        LogicPrime p = new LogicPrime();
         p.Primecheck(number);
 
         sc.close();

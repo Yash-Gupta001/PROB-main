@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Palindromecheck{
+class Repeatcheck{
     String[] s;
     int n,flag = 0;
 
@@ -19,31 +19,27 @@ class Palindromecheck{
         sc.close();
     }
 
-    void logic() {
+    void logicrepeat() {
         for (int j = 0; j < n; j++) {
-            flag = 0;
+            String result = "";  
 
-            for(int i = 0;i < s[j].length()/2;i++){
+            for (int i = 0; i < s[j].length(); i++) {
+                char current = s[j].charAt(i);
 
-                if (s[j].charAt(i) != s[j].charAt(s[j].length() - 1 - i)) {
-                    flag = 1;  // Not a palindrome
+                if (result.indexOf(current) == -1) {
+                    result += current;  // Concatenate the character if not found
                 }
-
             }
 
-            if(flag == 0){
-                System.out.println(s[j]+" is palindrome");
-            }
-
+            System.out.println("String without duplicates: " + result);
         }
     }
 }
 
-
-public class String_palindrome {
+public class Repeat_remove {
     public static void main(String[] args) {
-        Palindromecheck pc = new Palindromecheck();
+        Repeatcheck pc = new Repeatcheck();
         pc.getData();
-        pc.logic();
+        pc.logicrepeat();
     }
 }
