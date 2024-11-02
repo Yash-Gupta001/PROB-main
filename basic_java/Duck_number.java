@@ -38,3 +38,62 @@ public class Duck_number {
         logic.LogicImplement();  // Check and print if it's a duck number
     }
 }
+/*
+ * 
+ * by taking int 
+ * 
+ * import java.util.*;
+
+class Samp_Demo2222 {
+
+    int value, digit;
+    int p = 0;
+    int size;
+    boolean duckContain = false;
+
+    Scanner scan = new Scanner(System.in);
+
+    void getData() {
+        System.out.println("Enter the size:");
+        size = scan.nextInt();
+
+        System.out.println("Enter the number:");
+        value = scan.nextInt();
+
+        System.out.println("Value entered: " + value);
+    }
+
+    void logic() {
+        int originalValue = value;
+        p = 0;
+        int temp = value;
+
+        while (value > 0) {
+            digit = value % 10;
+            if (digit == 0 && p > 0) {
+                duckContain = true;
+            }
+            value = value / 10;
+            p++;
+        }
+
+        System.out.println("Total digits: " + p);
+
+        if (size != p) {
+            System.out.println("0" + temp + " is an Octal number");
+        } else if ((size == p) && duckContain) {
+            System.out.println(temp + " is a Duck number");
+        } else {
+            System.out.println("Not an Octal number and Not a Duck number");
+        }
+    }
+}
+
+public class Duck_Demo {
+    public static void main(String[] args) {
+        Samp_Demo2222 s = new Samp_Demo2222();
+        s.getData();
+        s.logic();
+    }
+}
+ */
