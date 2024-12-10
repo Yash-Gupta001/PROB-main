@@ -1,0 +1,60 @@
+Static variables wo hote hain jo ek class ke andar declare hote hain aur class ke saath associated hote hain, na ki kisi specific object ke saath.
+Static variables ka same value share hoti hai across all objects of the class.
+
+class Example {
+    static int count = 0; // Static variable
+
+    Example() {
+        count++;
+    }
+
+    void displayCount() {
+        System.out.println("Count: " + count);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Example obj1 = new Example();
+        obj1.displayCount();
+        Example obj2 = new Example();
+        obj2.displayCount();
+        obj1.displayCount();
+    }
+}
+
+
+
+Local variables wo hote hain jo kisi method, constructor ya block ke andar declare kiye jate hain aur sirf wahi block tak limited hote hain.Inka scope sirf method ya block tak hota hai jisme ye declare kiye gaye hain.
+
+public class Main {
+    void display() {
+        int localVar = 10; // Local variable
+        System.out.println("Local Variable: " + localVar);
+    }
+
+    public static void main(String[] args) {
+        Main obj = new Main();
+        obj.display();
+    }
+}
+
+
+
+Global variable-:
+Class ke andar declare kiye gaye  variables ko hum global variables ke tarah treat karte hain, kyunki inka scope class ke andar sab jagah hota hai.
+
+class Example {
+    int globalVar = 10; // Instance variable (Global)
+
+    void display() {
+        System.out.println("Global Variable: " + globalVar);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Example obj = new Example();
+        obj.display(); // Global Variable: 10
+    }
+}
