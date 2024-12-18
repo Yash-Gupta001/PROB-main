@@ -1,0 +1,143 @@
+
+
+defination-: Inheritance in Java is a mechanism where one class acquires the properties (fields) and behaviors (methods) of another class. It allows code reusability and establishes a parent-child relationship between classes.
+
+inheritance is achived by using keyword extends
+
+Types of inheritance-:
+
+1. Single Inheritance
+2. Multilevel Inheritance
+3. Hierarchical Inheritance
+
+
+1)Single Inheritance-:
+
+                Single Inheritance mein sirf ek parent (superclass) aur ek child (subclass) class hoti hai. Iska matlab hai ki ek child class apne sirf ek parent class ke methods aur properties inherit kar sakti hai.
+
+Isme ek direct relationship hota hai: Child → Parent.
+
+example code -:
+                class Parent {
+    void display() {
+        System.out.println("This is the parent class.");
+    }
+}
+
+class Child extends Parent {
+    void show() {
+        System.out.println("This is the child class.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Child child = new Child();
+        child.display(); // Inherited from Parent class
+        child.show();    // Defined in Child class
+    }
+}
+
+
+2)  Multilevel Inheritance-:
+
+                Multilevel inheritance ka matlab hota hai ki ek class doosri class se inherit karti hai, aur woh class ek aur upar wali class se inherit karti hai. Is tarah ek chain of inheritance banti hai, jisme top-level class ke features neeche wali classes tak pahuchte hain.
+
+example code-:
+                class Grandparent {
+    Grandparent() {
+        System.out.println("Grandparent ka constructor call hua.");
+    }
+}
+
+class Parent extends Grandparent {
+    Parent() {
+        System.out.println("Parent ka constructor call hua.");
+    }
+}
+
+class Child extends Parent {
+    Child() {
+        System.out.println("Child ka constructor call hua.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Child child = new Child(); // Child ka object banaya
+    }
+}
+
+
+3) Hierarchical Inheritance 
+                Hierarchical inheritance ka matlab hai ki ek parent class ko multiple child classes inherit kar sakti hain. Yani, ek hi parent ke alag-alag subclasses hote hain, jo parent ke methods aur properties ko apne-apne tareeke se use ya extend karte hain.
+
+example code -:
+
+            class Animal {
+    void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog barks.");
+    }
+}
+
+class Cat extends Animal {
+    void meow() {
+        System.out.println("Cat meows.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.eat();  // Inherited from Animal
+        dog.bark(); // Defined in Dog
+
+        Cat cat = new Cat();
+        cat.eat();  // Inherited from Animal
+        cat.meow(); // Defined in Cat
+    }
+}
+
+
+
+Multiple Inheritance Java mein kyun support nahi karti? 
+
+Java multiple inheritance ko classes ke saath support nahi karti. Iska main reason ambiguity aur complexity hota hai.
+
+1. Diamond Problem (Sabse Bada Reason)
+
+Agar ek class do parent classes ko inherit kare aur dono parent classes me same method ho, to compiler confuse ho jata hai ki kaunsa method use kare. Isko hum diamond problem kehte hain.
+
+Example:
+
+class A {
+    void display() {
+        System.out.println("Display from A");
+    }
+}
+
+class B extends A {
+    void display() {
+        System.out.println("Display from B");
+    }
+}
+
+class C extends A {
+    void display() {
+        System.out.println("Display from C");
+    }
+}
+
+// Java me agar allowed hota:
+class D extends B, C { // Yeh Java me allowed nahi hai
+    // Compiler confuse ho jata: B ka display() ya C ka display()?
+}
+
+Agar D class B aur C ko inherit kare, aur dono me display() method ho, to ambiguity hoti hai ki display() kaunsa call karna hai. Isi problem ko avoid karne ke liye Java me multiple inheritance classes ke saath allow nahi hai.
+
